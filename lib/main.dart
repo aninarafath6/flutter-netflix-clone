@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_clone/core/colors/app_colors.dart';
+import 'package:netflix_clone/core/theme/app_theme.dart';
 import 'package:netflix_clone/presentation/screen/main_screen/main_screen.dart';
 
 void main() {
@@ -11,11 +11,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Netflix Clone',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        scaffoldBackgroundColor: AppColors.scaffoldColor,
-      ),
+      themeMode: ThemeMode.dark,
+      theme: AppTheme.theme,
       home: const MainScreen(),
     );
   }
