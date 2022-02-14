@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/core/sizes/app_sizes.dart';
-
-import 'widgets/downloads_appbar_widget.dart';
+import 'package:netflix_clone/presentation/widgets/app_bar_widget.dart';
 
 class DownloadsPage extends StatelessWidget {
   const DownloadsPage({Key? key}) : super(key: key);
@@ -11,7 +10,9 @@ class DownloadsPage extends StatelessWidget {
     return const Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(AppSizes.toolbarHeight),
-        child: DownloadsAppBar(),
+        child: CAppBar(
+          title: 'Downloads',
+        ),
       ),
       body: Center(
         child: Text('downloads page'),

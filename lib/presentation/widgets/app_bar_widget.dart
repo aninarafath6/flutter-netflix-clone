@@ -3,22 +3,31 @@ import 'package:netflix_clone/core/images/app_images.dart';
 import 'package:netflix_clone/core/sizes/app_sizes.dart';
 import 'package:netflix_clone/core/theme/app_theme.dart';
 
-class DownloadsAppBar extends StatelessWidget {
-  const DownloadsAppBar({
+class CAppBar extends StatelessWidget {
+  const CAppBar({
     Key? key,
+    required this.title,
   }) : super(key: key);
+
+  final String title;
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
       title: Text(
-        'Downloads',
+        title,
         style: AppTheme.titleTextTheme,
       ),
       actions: [
-        const Icon(
-          Icons.cast,
-          size: AppSizes.titleIconSize,
+        IconButton(
+          onPressed: () {
+            debugPrint('cast');
+          },
+          splashRadius: AppSizes.defaultSplashRadius,
+          icon: const Icon(
+            Icons.cast,
+            size: AppSizes.titleIconSize,
+          ),
         ),
         AppSizes.spaceWidget,
         ClipRRect(
