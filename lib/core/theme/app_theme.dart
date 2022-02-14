@@ -7,7 +7,7 @@ import '../colors/app_colors.dart';
 class AppTheme {
   static ThemeData theme = ThemeData(
     scaffoldBackgroundColor: AppColors.scaffoldColor,
-    fontFamily: GoogleFonts.montserrat().fontFamily,
+    fontFamily: GoogleFonts.yantramanav().fontFamily,
     appBarTheme: const AppBarTheme(
       color: Colors.transparent,
     ),
@@ -23,8 +23,8 @@ class AppTheme {
 
 // title font theme
   static TextStyle titleTextTheme = const TextStyle(
-    color: Colors.white,
+    color: AppColors.titleFondColor,
     fontSize: AppSizes.titleFontSize,
-    fontWeight: FontWeight.w700,
+    fontWeight: FontWeight.w800,
   );
 }
