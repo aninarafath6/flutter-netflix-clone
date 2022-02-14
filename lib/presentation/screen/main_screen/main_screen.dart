@@ -7,7 +7,7 @@ import 'package:netflix_clone/presentation/screen/pages/new_and_hot_page/new_and
 import 'package:netflix_clone/presentation/screen/pages/search_page/search_page.dart';
 
 class MainScreen extends StatelessWidget {
-  const MainScreen({Key? key}) : super(key: key);
+   MainScreen({Key? key}) : super(key: key);
 
   final List<Widget> pages = const [
     HomePage(),
