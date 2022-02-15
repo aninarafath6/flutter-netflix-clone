@@ -12,40 +12,44 @@ class DownloadsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: const [
-        SubTitleRow(),
-        AppSizes.lgVSpacer,
-        Text(
-          DownloadsStrings.idu,
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            fontSize: AppSizes.titleFontSize - 4,
-            fontWeight: FontWeight.bold,
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: ListView(
+        physics: const BouncingScrollPhysics(),
+        children: const [
+          SubTitleRow(),
+          AppSizes.lgVSpacer,
+          Text(
+            DownloadsStrings.idu,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: AppSizes.titleFontSize - 4,
+              fontWeight: FontWeight.bold,
+            ),
           ),
-        ),
-        AppSizes.smVSpacer,
-        Text(
-          DownloadsStrings.description,
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            fontSize: 16,
-            color: Colors.grey,
+          AppSizes.smVSpacer,
+          Text(
+            DownloadsStrings.description,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 16,
+              color: Colors.grey,
+            ),
           ),
-        ),
-        AppSizes.smVSpacer,
-        DownloadsBannerWidget(),
-        AppSizes.lgVSpacer,
-        ActionButtons(
-          label: 'Set Up',
-          color: AppColors.buttonColor,
-        ),
-        AppSizes.smVSpacer,
-        ActionButtons(
-          label: 'See What You Can Download',
-          isSmall: true,
-        )
-      ],
+          AppSizes.smVSpacer,
+          DownloadsBannerWidget(),
+          AppSizes.lgVSpacer,
+          ActionButtons(
+            label: 'Set Up',
+            color: AppColors.buttonColor,
+          ),
+          AppSizes.smVSpacer,
+          ActionButtons(
+            label: 'See What You Can Download',
+            isSmall: true,
+          )
+        ],
+      ),
     );
   }
 }
