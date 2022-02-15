@@ -1,6 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:netflix_clone/core/colors/app_shadows.dart';
+import 'package:netflix_clone/core/sizes/app_sizes.dart';
 import 'package:netflix_clone/utils/dimension.dart';
 
 class BannerImage extends StatelessWidget {
@@ -9,7 +11,7 @@ class BannerImage extends StatelessWidget {
     required this.imageURL,
     this.angle = 0,
     this.xPos = 0,
-    this.scale = .88,
+    this.scale = .87,
     this.yPos = -16,
   }) : super(key: key);
 
@@ -29,16 +31,16 @@ class BannerImage extends StatelessWidget {
           offset: Offset(xPos, yPos),
           child: Container(
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8),
+              borderRadius: BorderRadius.circular(AppSizes.borderRadius),
               boxShadow: const [
-                BoxShadow(),
+                AppShadows.downloadsBannerShadow,
               ],
             ),
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(8),
+              borderRadius: BorderRadius.circular(AppSizes.borderRadius),
               child: Image.network(
                 imageURL,
-                height: context.getHeight(23),
+                height: context.getHeight(24),
               ),
             ),
           ),

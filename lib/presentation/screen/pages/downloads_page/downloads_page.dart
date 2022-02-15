@@ -1,11 +1,13 @@
-import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:netflix_clone/core/colors/app_colors.dart';
 import 'package:netflix_clone/core/sizes/app_sizes.dart';
 import 'package:netflix_clone/core/strings/downloads_page/downloads_strings.dart';
 import 'package:netflix_clone/presentation/screen/pages/downloads_page/widgets/downloads_banner_widget.dart';
 import 'package:netflix_clone/presentation/screen/pages/downloads_page/widgets/sub_title_row_widget.dart';
 import 'package:netflix_clone/presentation/widgets/app_bar_widget.dart';
+
+import 'widgets/action_button_widget.dart';
 
 class DownloadsPage extends StatelessWidget {
   const DownloadsPage({Key? key}) : super(key: key);
@@ -22,7 +24,7 @@ class DownloadsPage extends StatelessWidget {
       body: ListView(
         children: const [
           SubTitleRow(),
-          SizedBox(height: 50),
+          AppSizes.lgVSpacer,
           Text(
             DownloadsStrings.idu,
             textAlign: TextAlign.center,
@@ -31,7 +33,7 @@ class DownloadsPage extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          SizedBox(height: 20),
+          AppSizes.smVSpacer,
           Text(
             DownloadsStrings.description,
             textAlign: TextAlign.center,
@@ -40,8 +42,18 @@ class DownloadsPage extends StatelessWidget {
               color: Colors.grey,
             ),
           ),
-          SizedBox(height: 20),
+          AppSizes.smVSpacer,
           DownloadsBannerWidget(),
+          AppSizes.lgVSpacer,
+          ActionButtons(
+            label: 'Set Up',
+            color: AppColors.buttonColor,
+          ),
+          AppSizes.smVSpacer,
+          ActionButtons(
+            label: 'See What You Can Download',
+            isSmall: true,
+          )
         ],
       ),
     );

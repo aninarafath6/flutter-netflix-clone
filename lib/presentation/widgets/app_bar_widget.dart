@@ -29,7 +29,7 @@ class CAppBar extends StatelessWidget {
             size: AppSizes.titleIconSize,
           ),
         ),
-        AppSizes.spaceWidget,
+        AppSizes.smHSpacer,
         ClipRRect(
           borderRadius: BorderRadius.circular(10),
           child: Image.asset(
