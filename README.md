@@ -15,7 +15,7 @@
 
 # App UI
 
- <img width="250px  height alt="Screenshot 2022-02-15 at 11 46 19 AM" src="https://user-images.githubusercontent.com/65447144/154003034-0136a5ad-1358-4630-9021-7cc6e88f3d39.png">
+ <img width="250px"  height alt="Screenshot 2022-02-15 at 11 46 19 AM" src="https://user-images.githubusercontent.com/65447144/154003034-0136a5ad-1358-4630-9021-7cc6e88f3d39.png">
 
 
 
