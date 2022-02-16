@@ -28,7 +28,7 @@ class ActionButtons extends StatelessWidget {
           child: Text(
             label,
             style: TextStyle(
-              fontSize: 22,
+              fontSize: 18,
               fontWeight: FontWeight.w800,
               color: color == Colors.white ? Colors.black : Colors.white,
             ),
